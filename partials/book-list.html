@@ -1,0 +1,38 @@
+<!--<div id="book-list" ng-controller="BookListCtrl">-->
+<div id="book-list" class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <form class="col">
+                <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+    </div>
+    <br>
+    <div class="book-list container-fluid list-group">
+        <div ng-repeat="book in filteredBooks" class="list-group-item">
+            <div class="row">
+                <div class="book-image col-lg-2 col-sm-12 col-md-2">
+                    <img src={{book.imageLink}} class="border rounded border border-primary">
+                </div>
+                <div class="col-lg-10 book col-sm-12 col-md-10">
+                    <div class="book-list-header">
+                        <h4>{{book.title}}</h4>
+                        <h6>{{book.author}}</h6>
+                    </div>
+                    <div class="book-info">
+                        <span class="col">Country : {{book.country}}</span>
+                        <span class="col">Language : {{book.language}}</span>
+                        <span class="col">Pages : {{book.pages}}</span>
+                        <span class="col">Year : {{book.year}}</span>
+                    </div>
+                    <div class="book-list-footer">
+                        <a href="" class="btn btn-primary" ng-click="addToCart(book)">Add to cart</a>
+                        <a href={{book.link}} target="blank" class="btn btn-primary">View > </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <ul uib-pagination total-items="totalItems" ng-model="currentPage" class="pagination" boundary-links="true"></ul>
+    </div>
+</div>

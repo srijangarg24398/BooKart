@@ -1,0 +1,135 @@
+#headerWrapper {
+    width: 100%;
+}
+
+.logo {
+    padding: 10px;
+    margin-right: 10x;
+    font-size: 35px;
+    font-family: fantasy;
+}
+
+.tagline {
+    font-size: 10px;
+    margin-top: 50px;
+    margin-left: -123px;
+    font-family: monospace;
+}
+
+.nav-wrapper {
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+main {
+    margin-top: 80px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination>li a {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.pagination>li a:hover {
+    z-index: 2;
+    color: #0056b3;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.pagination>li a:focus {
+    z-index: 2;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.pagination>li a:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.pagination-page:first-child a {
+    margin-left: 0;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.pagination-page:last-child a {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.pagination-page.active a {
+    z-index: 1;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.pagination-page.disabled a {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.pagination-first {
+    border-radius: 50px;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1%;
+    width: 100%;
+}
+
+.book .book-list-footer {
+    display: flex;
+    /* justify-content: flex-end; */
+    justify-content: space-between;
+}
+
+.book-image {
+    display: flex;
+    justify-content: center;
+}
+
+.book-image img {
+    height: 200px;
+    width: 120px;
+}
+
+.book .book-info {
+    display: flex;
+}
+
+@media(max-width: 720px) {
+    .book {
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .book-image img {
+        height: 300px;
+        width: 200px;
+    }
+    .book .book-list-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
