@@ -12,7 +12,7 @@
         <div ng-repeat="book in filteredBooks | filter:searchStr" class="list-group-item book-anim">
             <div class="row">
                 <div class="book-image col-lg-2 col-sm-12 col-md-2">
-                    <img src={{ "https://srijangarg24398.github.io/BooKart/"+book.imageLink}} class="border rounded border border-primary">
+                    <img src={{ book.imageLink}} class="border rounded border border-primary">
                 </div>
                 <div class="col-lg-10 book col-sm-12 col-md-10">
                     <div class="book-list-header">
