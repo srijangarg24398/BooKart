@@ -1,15 +1,12 @@
 (function() {
     myApp = angular.module("myApp");
-    myApp.controller('BookListCtrl', ['$scope', '$q', '$http', function($scope, $q, $http) {
+    myApp.controller('BookListCtrl', ['$scope', '$q', 'bookService', 'kartService', function($scope, $q, bookService, kartService) {
         $scope.filteredBooks = [];
         $scope.currentPage = 1;
         $scope.numPerPage = 10;
         $scope.totalItems = 100;
 
-        $http({
-            method: "GET",
-            url: "../../data/bookData.json"
-        }).then(function successCallback(response) {
+        bookService.getBooks().then(function successCallback(response) {
             $scope.books = response.data;
             $scope.totalItems = $scope.books.length;
             var promise = asyncFilterBooks(response.data);
@@ -38,7 +35,7 @@
         }
 
         $scope.addToCart = function(book) {
-            console.log(book);
+            kartService.addToKart(book);
         };
 
     }]);

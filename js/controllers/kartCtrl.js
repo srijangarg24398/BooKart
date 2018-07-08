@@ -1,11 +1,9 @@
 (function() {
     myApp = angular.module("myApp");
-    myApp.controller('KartCtrl', ['$scope', '$q', function($scope, $q) {
-        $scope.kart = [];
-        $scope.currentPage = 1;
-        $scope.numPerPage = 10;
-        $scope.totalItems = 100;
-
-
+    myApp.controller('KartCtrl', ['$scope', 'kartService', function($scope, kartService) {
+        $scope.kart = kartService.getKart();
+        $scope.buy = function(book) {
+            kartService.buyBook(book);
+        };
     }]);
 }());

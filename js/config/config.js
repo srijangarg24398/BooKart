@@ -12,7 +12,7 @@
             })
             .when('/kart', {
                 templateUrl: "partials/kart-items.html",
-                controller: "KartController"
+                controller: "KartCtrl"
             }).
         otherwise({
             templateUrl: 'partials/404.html'

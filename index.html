@@ -29,8 +29,12 @@
 
     <script src="js/config/config.js"></script>
 
+    <script src="js/services/book.service.js"></script>
+    <script src="js/services/kart.service.js"></script>
+
     <script src="js/controllers/headerCtrl.js"></script>
     <script src="js/controllers/bookListCtrl.js"></script>
+    <script src="js/controllers/kartCtrl.js"></script>
 
     <link rel="shortcut icon" href="#" />
 </head>
@@ -44,10 +48,10 @@
 			</button>
             <div class="collapse navbar-collapse " id="navbarCollapse ">
                 <ul class="navbar-nav mr-auto ">
-                    <li class="nav-item active ">
+                    <li class="nav-item" ng-class="{active: nav.isActive('/books')}">
                         <a class="nav-link btn " ng-href="#!books">Books</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item " ng-class="{active: nav.isActive('/kart')}">
                         <a class="nav-link btn " ng-href="#!kart">Kart</a>
                     </li>
                 </ul>
@@ -55,7 +59,7 @@
         </nav>
     </header>
     <main>
-        <div ng-view></div>
+        <div ng-view class="views"></div>
     </main>
     <br>
 </body>

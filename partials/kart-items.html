@@ -12,12 +12,13 @@
                     </div>
                     <div class="book-info">
                         <span class="col">Country : {{book.country}}</span>
-                        <span class="col">Language : {{book.language}}</span>
+                        <span class="col">Language : {{book.language | uppercase}}</span>
                         <span class="col">Pages : {{book.pages}}</span>
+                        <span class="col">Currency : {{book.pages | currency:"Rs."}}</span>
                         <span class="col">Year : {{book.year}}</span>
                     </div>
                     <div class="book-list-footer">
-                        <a href="" class="btn btn-primary" ng-click="addToCart(book)">Buy</a>
+                        <a href="" class="btn btn-primary" ng-click="buy(book)">Buy</a>
                     </div>
                 </div>
             </div>
