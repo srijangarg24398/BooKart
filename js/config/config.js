@@ -3,15 +3,15 @@
     myApp.config(function($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: "../../partials/book-list.html",
+                templateUrl: "https://srijangarg24398.github.io/BooKart/partials/book-list.html",
                 controller: "BookListCtrl"
             })
             .when('/books', {
-                templateUrl: "../../partials/book-list.html",
+                templateUrl: "https://srijangarg24398.github.io/BooKart/partials/book-list.html",
                 controller: "BookListCtrl"
             })
             .when('/kart', {
-                templateUrl: "../../partials/kart-items.html",
+                templateUrl: "https://srijangarg24398.github.io/BooKart/partials/kart-items.html",
                 controller: "KartCtrl"
             }).
         otherwise({
