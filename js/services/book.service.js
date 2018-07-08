@@ -6,7 +6,7 @@
             getBooks: function() {
                 return $http({
                     method: "GET",
-                    url: "../../data/bookData.json"
+                    url: "https://srijangarg24398.github.io/BooKart/data/bookData.json"
                 });
             }
         };
